@@ -1,0 +1,49 @@
+{
+    "input": {
+        "branchType": {
+            "label": "指定拉取方式",
+            "default": "BRANCH",
+            "type": "enum-input",
+            "list": [
+                {
+                    "value": "BRANCH",
+                    "label": "按分支"
+                },
+                {
+                    "value": "TAG",
+                    "label": "按TAG"
+                }
+            ]
+        },
+        "branchName": {
+            "label": "分支名称",
+            "placeholder": "请输入分支名称",
+            "type": "vuex-input",
+            "required": true,
+            "rely": {
+                "operation": "AND",
+                "expression": [
+                    {
+                        "key": "branchType",
+                        "value": "BRANCH"
+                    }
+                ]
+            }
+        },
+        "branchTag": {
+            "label": "Tag",
+            "placeholder": "请输入Tag名称",
+            "type": "vuex-input",
+            "required": true,
+            "rely": {
+                "operation": "AND",
+                "expression": [
+                    {
+                        "key": "branchType",
+                        "value": "TAG"
+                    }
+                ]
+            }
+        }
+    }
+}

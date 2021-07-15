@@ -6,6 +6,7 @@
             :atom-props-container-info="containerInfo"
             :atom-props-disabled="atomDisabled"
             :current-user-info="currentUserInfo"
+            :env-conf="envConf"
         >
         </Atom>
     </div>
@@ -44,7 +45,8 @@
                     chineseName: '张三'
                 },
                 // 当前插件是否可编辑，当在构建详情、预览、模板示例化出的流水线点开该插件时，不可编辑
-                atomDisabled: false
+                atomDisabled: false,
+                envConf: {}
             }
         },
         methods: {

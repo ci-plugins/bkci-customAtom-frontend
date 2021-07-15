@@ -40,6 +40,10 @@
             currentUserInfo: {
                 type: Object,
                 default: () => ({})
+            },
+            envConf: {
+                type: Object,
+                default: () => ({})
             }
         },
         methods: {

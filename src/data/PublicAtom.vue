@@ -8,6 +8,7 @@
                 :atom-props-container-info="containerInfo"
                 :atom-props-disabled="atomDisabled"
                 :current-user-info="currentUserInfo"
+                :env-conf="envConf"
             >
             </Atom>
         </main>
@@ -48,7 +49,8 @@
                 atomPropsModel: {},
                 containerInfo: {},
                 currentUserInfo: {},
-                atomDisabled: false
+                atomDisabled: false,
+                envConf: {}
             }
         },
 
@@ -67,6 +69,8 @@
                     this.currentUserInfo = e.data.currentUserInfo || {}
                     // 当前插件是否可编辑，当在构建详情、预览、模板示例化出的流水线点开该插件时，不可编辑
                     this.atomDisabled = e.data.atomDisabled || false
+                    // 当前插件在研发商店设置的环境变量
+                    this.envConf = e.data.envConf || {}
                     this.hasInitData = true
                 }
             })
